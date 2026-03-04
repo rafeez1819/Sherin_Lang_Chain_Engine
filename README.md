@@ -12,49 +12,8 @@ Multilingual partitioning
 
 This is modular, deterministic, and enterprise-scalable.
 
-Repository Structure
-lang_chain/
-│
-├── src/
-│   ├── core/
-│   │   ├── chain-node.ts
-│   │   ├── language-chain.ts
-│   │   ├── sherin-engine.ts
-│   │   └── types.ts
-│   │
-│   ├── nlp/
-│   │   ├── tokenizer.ts
-│   │   ├── dictionary.ts
-│   │   ├── grammar-snake.ts
-│   │   ├── semantic-parser.ts
-│   │   └── rhetorical-detector.ts
-│   │
-│   ├── lexicon/
-│   │   ├── lexicon-loader.ts
-│   │   ├── synonym-graph.ts
-│   │   ├── semantic-cluster.ts
-│   │   ├── multilingual-partition.ts
-│   │   ├── lexicon-bridge.ts
-│   │   └── types.ts
-│   │
-│   └── index.ts
-│
-├── data/
-│   ├── lexicon.en.json.gz
-│   ├── lexicon.fr.json.gz
-│   ├── lexicon.es.json.gz
-│   └── semantic-index.json
-│
-├── tests/
-│   ├── chain.integration.test.ts
-│   ├── synonym.graph.test.ts
-│   ├── semantic.cluster.test.ts
-│   └── rhetorical.detector.test.ts
-│
-├── demo.ts
-├── package.json
-├── tsconfig.json
-└── jest.config.js
+<img width="351" height="968" alt="image" src="https://github.com/user-attachments/assets/902244ac-af64-4464-8c49-0ee15a8d34db" />
+
 1. ChainNode Abstraction (Plugin Pipeline)
 src/core/chain-node.ts
 export interface ChainContext {
