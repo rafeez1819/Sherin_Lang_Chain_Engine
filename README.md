@@ -217,12 +217,13 @@ export class SherinEngine {
       // Add semantic node
       // Add lexicon enrichment node
     ])
+    
   }
 
   async process(text: string) {
     return this.chain.run(text)
   }
-}
+
 
 Engine is now:
 
