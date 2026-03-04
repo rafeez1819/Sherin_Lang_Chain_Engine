@@ -20,6 +20,8 @@ ________________________________________________________________________________
 
 
 1. ChainNode Abstraction (Plugin Pipeline)
+  
+```
 src/core/chain-node.ts
 export interface ChainContext {
   text: string
@@ -50,10 +52,13 @@ export class LanguageChain {
     return context
   }
 }
+```
 
 Pipeline is now modular and pluggable.
 
 2. Synonym Graph Indexing
+
+```
 src/lexicon/synonym-graph.ts
 export class SynonymGraph {
   private graph: Map<string, Set<string>> = new Map()
@@ -83,10 +88,13 @@ export class SynonymGraph {
     return Array.from(this.graph.get(word) || [])
   }
 }
+```
 
 Bidirectional mapping ensures semantic symmetry.
 
 3. Semantic Field Clustering
+
+```
 src/lexicon/semantic-cluster.ts
 export class SemanticCluster {
   private fields: Map<string, Set<string>> = new Map()
@@ -110,10 +118,14 @@ export class SemanticCluster {
     return Array.from(this.fields.get(field) || [])
   }
 }
+```
+
 
 Supports thematic grouping for narrative generation.
 
 4. Rhetorical Device Detection Layer
+
+```
 src/nlp/rhetorical-detector.ts
 export function detectRhetoric(text: string) {
   const devices: string[] = []
@@ -136,10 +148,13 @@ export function detectRhetoric(text: string) {
 
   return devices
 }
+```
 
 This is rule-based now. Can later be upgraded to ML classification.
 
 5. Multilingual Partitioning
+
+```
 src/lexicon/multilingual-partition.ts
 export type SupportedLanguage = "en" | "fr" | "es"
 
@@ -154,10 +169,13 @@ export class MultilingualPartition {
     return this.lexicons.get(language)
   }
 }
+```
 
 This allows independent lexicon loading per language.
 
 6. Lexicon Loader (Language Aware)
+
+```
 src/lexicon/lexicon-loader.ts
 import fs from "fs"
 import zlib from "zlib"
@@ -179,10 +197,13 @@ export function loadLexicon(language: string) {
 
   return frozen
 }
+```
 
 Supports partitioned lexicon sets.
 
 7. Engine Composition
+
+```
 src/core/sherin-engine.ts
 import { LanguageChain } from "./language-chain"
 import { detectRhetoric } from "../nlp/rhetorical-detector"
@@ -223,7 +244,7 @@ export class SherinEngine {
   async process(text: string) {
     return this.chain.run(text)
   }
-
+```
 
 Engine is now:
 
