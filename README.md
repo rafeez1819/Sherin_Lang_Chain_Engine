@@ -12,7 +12,10 @@ Multilingual partitioning
 
 This is modular, deterministic, and enterprise-scalable.
 
-<img width="351" height="968" alt="image" src="https://github.com/user-attachments/assets/902244ac-af64-4464-8c49-0ee15a8d34db" />
+<img width="276" height="49" alt="image" src="https://github.com/user-attachments/assets/65dd5ef4-1ad1-4733-93e1-e5854e5739a6" />
+<img width="318" height="855" alt="image" src="https://github.com/user-attachments/assets/a3285e0c-f92d-4626-b0e1-2098ed3720e4" />
+
+
 
 1. ChainNode Abstraction (Plugin Pipeline)
 src/core/chain-node.ts
